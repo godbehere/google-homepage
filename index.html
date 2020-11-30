@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
     <style>
+        body, a {
+            font-family: arial, sans-serif;
+            font-size: 13px;
+        }
+        
         body {
             height: 1000px;
         }
-
-        #logo img {
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
 
         }
         button {
@@ -14,57 +24,129 @@
         .box-container {
             display: flex;
             flex-direction: column;
-            background-color:yellow;
-            width: 100%;
+            //background-color:yellow;
             align-items: center;
-            justify-content: center;
-            height: 500px;
-        }
 
-        #search {
-            background-color: red;
-            width: 50%;
-            height: 100px;
+        }
+        main .box-container {
+            margin-top: 200px;
+
+        }
+        .search-bar{
+            border-radius: 18px;
+            height: 36px;
+            width: 500px;
+            margin: 15px;
+            border-style: solid;
+            border-color: rgb(209, 209, 209);
+            border-width: 1px;
+        }
+        .search-button {
+            background-color: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            border-radius: 4px;
+            color: #3c4043;
+            font-family: arial,sans-serif;
+            font-size: 14px;
+            margin: 11px 4px;
+            padding: 0 16px;
+            line-height: 27px;
+            height: 36px;
+            min-width: 54px;
             text-align: center;
+            cursor: pointer;
         }
-
-        #logo {
+        .buttons {
             display: flex;
             justify-content: center;
-            background-color: blue;
+        }
+        .search {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            //background-color: red;
             height: 100px;
-            width: 50%;
         }
 
+        .logo {
+            display: flex;
+            align-items: center;
+            //background-color: blue;
+            height: 100px;
+        }
         #nav-bar {
             position: fixed;
-            top: 0;
-            background-color: grey;
+            display: flex;
+            justify-content: space-between;
+            //align-items: center;
+            top: 15px;
+            //background-color: grey;
             height: 20px;
             width: 100%; 
+        }
+        #nav-bar a {
+            color: #000;
+            opacity: 0.75;
+        }
+        .right-nav {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .left-nav a{
+            padding-left: 15px;
+        }
+        .right-nav a{
+            padding-right: 15px;
+        }
+        .waffle {
+            margin-right: 15px;
+            display: inline-block;
+            height: 25px;
+            width: 25px;
+            background-color: rgb(167, 167, 167);
+        }
+        .profile-image {
+            width: 30px;
+            height: 30px;
+            margin-right: 15px;
+            display: inline-block;
+            border-radius: 50%;
         }
     </style>
     <head>
     </head>
     <body>
         <header>
-            <div id="nav-bar"></div>
+            <nav id="nav-bar">
+                <div class="left-nav">
+                    <a href="" class="about-link">About</a>
+                    <a href="" class="store-link">Store</a>
+                </div>
+                <div class="right-nav">
+                    <a href="" class="gmail-link">Gmail</a>
+                    <a href="" class="images-link">Images</a>
+                    <div class="waffle"></div>
+                    <img src="https://lh3.googleusercontent.com/ogw/ADGmqu-4DtoWi15w_zGr9oyTq8GXqQYcIdqO8JG-aRlj8Xc=s32-c-mo" class="profile-image">
+                </div>
+            </nav>
         </header>
         <main>
             <div class="box-container">
-                <div  id="logo">
+                <div  class="logo">
                     <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
                 </div>
-                <div id="search">
+                <div class="search">
                     <form action="">
-                        <input type="search" placeholder="">
-                        <br>
-                        <button type="submit">Google Search</button>
-                        <button type="submit">I'm Feeling Lucky!</button> 
+                        <input type="search" placeholder="" class="search-bar">
+                        <div class="buttons">
+                            <button type="submit" class="search-button">Google Search</button>
+                            <button type="submit" class="search-button">I'm Feeling Lucky!</button> 
+                        </div>
                     </form>
                 </div>
             </div>
-            </main>
+        </main>
         <footer>
 
         </footer>
