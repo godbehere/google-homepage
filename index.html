@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+            height: 1000px;
+        }
+
+        #logo img {
+
+        }
+        button {
+            margin: 3px;
+        }
+        .box-container {
+            display: flex;
+            flex-direction: column;
+            background-color:yellow;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            height: 500px;
+        }
+
+        #search {
+            background-color: red;
+            width: 50%;
+            height: 100px;
+            text-align: center;
+        }
+
+        #logo {
+            display: flex;
+            justify-content: center;
+            background-color: blue;
+            height: 100px;
+            width: 50%;
+        }
+
+        #nav-bar {
+            position: fixed;
+            top: 0;
+            background-color: grey;
+            height: 20px;
+            width: 100%; 
+        }
+    </style>
+    <head>
+    </head>
+    <body>
+        <header>
+            <div id="nav-bar"></div>
+        </header>
+        <main>
+            <div class="box-container">
+                <div  id="logo">
+                    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+                </div>
+                <div id="search">
+                    <form action="">
+                        <input type="search" placeholder="">
+                        <br>
+                        <button type="submit">Google Search</button>
+                        <button type="submit">I'm Feeling Lucky!</button> 
+                    </form>
+                </div>
+            </div>
+            </main>
+        <footer>
+
+        </footer>
+
+    </body>
+</html>
